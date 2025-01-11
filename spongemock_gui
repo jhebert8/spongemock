@@ -1,0 +1,15 @@
+import PySimpleGUI as sg
+
+inp = sg.popup_get_text('Get this text mocked!')
+
+def spongemock():
+    mock=[]
+    for (i, char) in enumerate(inp):
+        if i % 2 == 0:
+            mock.append(char.upper())
+        else:
+            mock.append(char.lower())
+
+    return "".join(mock)
+
+sg.popup(spongemock())
